@@ -8,3 +8,7 @@ def show_main(request):
     }
 
     return render(request, "main.html", context)
+
+def index(request):
+    template = "main/main.html"
+    return render(request, template)

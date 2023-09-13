@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{% load static %}
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +12,9 @@
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="{% static 'main/app.css' %}">
 
-  <title>RUBY</title>
+  <title>Ruby</title>
 </head>
 
 <body>
@@ -20,24 +22,20 @@
   <section class="container-fluid px-0">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <div id="headingGroup" class="text-white text-center d-none d-lg-block mt-5">
+        <div id="headingGroup" class="text-dark text-center d-none d-lg-block mt-5">
           <h1 class="">R<span>/</span>U<span>/</span>B<span>/</span>Y</h1>
           <h2>Name: </h2>
-          <p>{{ name }}</p> <!-- Ubahlah sesuai dengan nama kamu -->
+          <p>{{ name }}</p>
           <h2>Class: </h2>
-          <p>{{ class }}</p> <!-- Ubahlah sesuai dengan kelas kamu -->
+          <p>{{ class }}</p>
         </div>
       </div>
       <div class="col-lg-6">
-        <img class="img-fluid" src="imgs/sprinkles.png" alt="">
+        <img class="img-fluid" src="{% static 'main/imgs/sprinkles.png' %}" alt="Sprinkles">
       </div>
     </div>
   </section>
 
-  <!-- <h5>Name: </h5>
-  <p>{{ name }}</p> <!-- Ubahlah sesuai dengan nama kamu -->
-  <!-- <h5>Class: </h5>
-  <p>{{ class }}</p> Ubahlah sesuai dengan kelas kamu -->
 </body>
 
 </html>

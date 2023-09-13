@@ -6,6 +6,19 @@ Kelas   : PBP B
 
 Nama Aplikasi: Ruby
 
+Pengerjaan tugas ini adalah hasil pembelajaran dari tutorial yang telah diajarkan saat sesi lab di kuliah. Cara saya menuntaskan tugas ini adalah melalui pembuatan proyek lain sebagai latihan terlebih dulu sebelum mengerjakan proyek ini. Dengan demikian, saya memahami langkah demi langkahnya dengan membiasakan diri membuat suatu proyek.
+
+![request client Django](request-client-Django.png)
+Dalam bagan tersebut, berikut adalah penjelasannya:
+
+1. Client mengirimkan HTTP Request ke Load Balancer.
+2. Load Balancer meneruskan request tersebut ke Django Web App.
+3. Django Web App menggunakan urls.py untuk pemetaan URL dan menentukan view mana yang harus dipanggil.
+4. views.py dapat melakukan query ke database melalui models.py.
+5. models.py bertugas untuk mengambil data dari Database.
+6. views.py juga bertugas untuk merender template yang ada di HTML Template.
+7. Setelah itu, Django Web App mengirimkan HTTP Response kembali ke Client.
+
 Virtual Environment adalah alat yang membantu memisahkan dependensi yang diperlukan oleh berbagai proyek dengan membuat lingkungan virtual python terisolasi untuk proyek tersebut.
 Jika kita menggunakan virtual environment dalam membuat web aplikasi, beberapa manfaat yang kita dapatkan, yaitu:
 1. Dependensi yang terisolasi. Artinya setiap proyek dapat memiliki dependensi yang berbeda dengan versi yang berbeda. Hal ini berfungsi untuk menghindari konflik antar versi.
@@ -15,7 +28,6 @@ Jika kita menggunakan virtual environment dalam membuat web aplikasi, beberapa m
 
 Virtual environment penting dalam membuat proyek seperti web aplikasi ini. Akan tetapi, kita juga dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment. Tentu saja hal ini diikuti oleh beberapa risiko, seperti (1) rentan akan konolik antardependensi; (2) Jika ingin memperbarui atau menghapus pustaka tertentu maka harus dengan cara manual; (3) 
 Jika ada proyek yang rentan keamanannya, maka akan memengaruhi proyek lainnya juga.
-
 
 
 Model-View-Controller (MVC), Model-View-Template (MVT), dan Model-View-ViewModel (MVVM) adalah pola desain yang digunakan dalam pengembangan perangkat lunak, khususnya aplikasi web dan aplikasi berbasis GUI. Berikut ini penjelasan singkat dan perbedaan dari ketiga pola desain tersebut:
