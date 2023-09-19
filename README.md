@@ -4,6 +4,10 @@ NPM     : 2206811846
 
 Kelas   : PBP B
 
+# Tugas 2
+POST vs. GET
+
+# Tugas 1
 Nama Aplikasi: Ruby (tautan adaptable.io: https://my-app-ruby.adaptable.app/)
 
 Pengerjaan tugas ini adalah hasil pembelajaran dari tutorial yang telah diajarkan saat sesi lab di kuliah. Cara saya menuntaskan tugas ini adalah melalui pembuatan proyek lain sebagai latihan terlebih dulu sebelum mengerjakan proyek ini. Dengan demikian, saya memahami langkah demi langkahnya dengan membiasakan diri membuat suatu proyek.
