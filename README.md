@@ -55,12 +55,18 @@ Dilansir dari AWS Amazon, JSON (JavaScript Object Notation) dan XML (eXtensible 
 - Penggunaan dalam API RESTful. JSON menjadi format _default_ untuk banyak API RESTful. Oleh karena itu, banyak aplikasi yang mengadopsi arsitektur RESTful memilih JSON sebagai format pertukaran data mereka;
 - Tidak memerlukan _Namespace_. Berbeda dengan XML, JSON tidak memerlukan _namespace_, yang dapat menyederhanakan dokumen dan mengurangi kerumitan;
 
+Tampilan HTML, JSON, XML, JSON by ID, dan XML by ID
+![tampilan format dalam JSON](gambar/JSONformat.png)
+![tampilan format dalam XML](gambar/XMLformat.png)
+![tampilan format dalam JSON by ID](gambar/JSONbyIDformat.png)
+![tampilan format dalam XML by ID](gambar/XMLbyIDformat.png)
+
 # Tugas 1
 Nama Aplikasi: Ruby (tautan adaptable.io: https://my-app-ruby.adaptable.app/)
 
 Pengerjaan tugas ini adalah hasil pembelajaran dari tutorial yang telah diajarkan saat sesi lab di kuliah. Cara saya menuntaskan tugas ini adalah melalui pembuatan proyek lain sebagai latihan terlebih dulu sebelum mengerjakan proyek ini. Dengan demikian, saya memahami langkah demi langkahnya dengan membiasakan diri membuat suatu proyek.
 
-![request client Django](request-client-Django.png)
+![request client Django](gambar/request-client-Django.png)
 Dalam bagan tersebut, berikut adalah penjelasannya:
 
 1. _Client_ mengirimkan HTTP _Request_ ke _Load Balancer_.
