@@ -4,7 +4,7 @@ NPM     : 2206811846
 
 Kelas   : PBP B
 
-# Tugas 2
+# Tugas 3
 ## POST vs. GET
 Metode POST dan GET adalah metode _request_ yang paling umum digunakan dalam protokol HTTP untuk berkomunikasi dengan server. Keduanya digunakan untuk mengirimkan data dari klien ke server, namun cara dan tujuannya berbeda.
 
@@ -55,7 +55,7 @@ Dilansir dari AWS Amazon, JSON (JavaScript Object Notation) dan XML (eXtensible 
 - Penggunaan dalam API RESTful. JSON menjadi format _default_ untuk banyak API RESTful. Oleh karena itu, banyak aplikasi yang mengadopsi arsitektur RESTful memilih JSON sebagai format pertukaran data mereka;
 - Tidak memerlukan _Namespace_. Berbeda dengan XML, JSON tidak memerlukan _namespace_, yang dapat menyederhanakan dokumen dan mengurangi kerumitan;
 
-Tampilan objek dalam format HTML, JSON, XML, JSON by ID, dan XML by ID
+**Tampilan objek dalam format HTML, JSON, XML, JSON by ID, dan XML by ID**
 
 Format HTML
 ![tampilan dalam format HTML](gambar/HTMLformat1.png)
@@ -75,9 +75,9 @@ Format XML by ID
 
 Cara saya mengimplementasikan _checklist_ tugas ini secara _step-by-step_ adalah dengan memperhatikan atau mempelajari dulu pengaruh perintah-perintah (commands), yang diajarkan pada sesi tutorial, terhadap app shopping_list. Kemudian, setelah cukup memahaminya, saya mulai mengerjakan tugas ini. Hal ini membantu saya untuk menghindari perbuatan "hanya _copy-paste_" perintah dalam mengerjakan tugas ini.
 
-**END OF TUGAS 2**
+**END OF TUGAS 3**
 
-# Tugas 1
+# Tugas 2
 Nama Aplikasi: Ruby (tautan adaptable.io: https://my-app-ruby.adaptable.app/)
 
 Pengerjaan tugas ini adalah hasil pembelajaran dari tutorial yang telah diajarkan saat sesi lab di kuliah. Cara saya menuntaskan tugas ini adalah melalui pembuatan proyek lain sebagai latihan terlebih dulu sebelum mengerjakan proyek ini. Dengan demikian, saya memahami langkah demi langkahnya dengan membiasakan diri membuat suatu proyek.
