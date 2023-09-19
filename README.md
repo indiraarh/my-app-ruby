@@ -56,11 +56,12 @@ Dilansir dari AWS Amazon, JSON (JavaScript Object Notation) dan XML (eXtensible 
 - Tidak memerlukan _Namespace_. Berbeda dengan XML, JSON tidak memerlukan _namespace_, yang dapat menyederhanakan dokumen dan mengurangi kerumitan;
 
 Tampilan objek dalam format HTML, JSON, XML, JSON by ID, dan XML by ID
-
-![tampilan format dalam JSON](gambar/JSONformat.png)
-![tampilan format dalam XML](gambar/XMLformat.png)
-![tampilan format dalam JSON by ID](gambar/JSONbyIDformat.png)
-![tampilan format dalam XML by ID](gambar/XMLbyIDformat.png)
+![tampilan dalam format HTML](gambar/HTMLformat1.png)
+![tampilan dalam format HTML](gambar/HTMLformat2.png)
+![tampilan dalam format JSON](gambar/JSONformat.png)
+![tampilan dalam format XML](gambar/XMLformat.png)
+![tampilan dalam format JSON by ID](gambar/JSONbyIDformat.png)
+![tampilan dalam format XML by ID](gambar/XMLbyIDformat.png)
 
 Cara saya mengimplementasikan _checklist_ tugas ini secara _step-by-step_ adalah dengan memperhatikan atau mempelajari dulu pengaruh perintah-perintah (commands), yang diajarkan pada sesi tutorial, terhadap app shopping_list. Kemudian, setelah cukup memahaminya, saya mulai mengerjakan tugas ini. Hal ini membantu saya untuk menghindari perbuatan "hanya _copy-paste_" perintah dalam mengerjakan tugas ini.
 **END OF TUGAS 2**
