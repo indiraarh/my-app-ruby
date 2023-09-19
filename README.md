@@ -5,7 +5,7 @@ NPM     : 2206811846
 Kelas   : PBP B
 
 # Tugas 2
-POST vs. GET
+## POST vs. GET
 
 # Tugas 1
 Nama Aplikasi: Ruby (tautan adaptable.io: https://my-app-ruby.adaptable.app/)
