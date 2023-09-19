@@ -74,6 +74,7 @@ Format XML by ID
 ![tampilan dalam format XML by ID](gambar/XMLbyIDformat.png)
 
 Cara saya mengimplementasikan _checklist_ tugas ini secara _step-by-step_ adalah dengan memperhatikan atau mempelajari dulu pengaruh perintah-perintah (commands), yang diajarkan pada sesi tutorial, terhadap app shopping_list. Kemudian, setelah cukup memahaminya, saya mulai mengerjakan tugas ini. Hal ini membantu saya untuk menghindari perbuatan "hanya _copy-paste_" perintah dalam mengerjakan tugas ini.
+
 **END OF TUGAS 2**
 
 # Tugas 1
