@@ -4,6 +4,67 @@ NPM     : 2206811846
 
 Kelas   : PBP B
 
+# Tugas 4
+
+## Django UserCreationForm
+
+Django UserCreationForm adalah sebuah formulir yang digunakan untuk membuat pengguna baru, dengan tidak ada hak istimewa, dari nama pengguna dan kata sandi yang diberikan. Formulir ini merupakan bagian dari modul `django.contrib.auth`, yang menyediakan sistem autentikasi bawaan Django. Formulir ini hanya memiliki dua bidang: password1 dan password2, yang digunakan untuk memverifikasi bahwa pengguna memasukkan kata sandi yang sama.
+
+**Kelebihan**
+
+1. Formulir ini merupakan bagian dari sistem otentikasi bawaan Django, yang menyediakan fitur-fitur seperti manajemen pengguna, grup, izin, dan sesi;
+2. Formulir ini hanya memiliki dua bidang: password1 dan password2, yang digunakan untuk memverifikasi bahwa pengguna memasukkan kata sandi yang sama dan mencegah kesalahan ketik atau lupa kata sandi;
+3. Formulir ini juga memiliki metode save, yang mengatur kata sandi pengguna dan menyimpannya ke basis data. Hal ini dapat mempermudah proses pendaftaran pengguna tanpa perlu menulis kode tambahan;
+4. Formulir ini dapat disesuaikan dengan menurunkan kelas UserCreationForm dan menambahkan bidang tambahan yang diinginkan.
+
+
+**Kekurangan**
+
+1. Formulir ini tidak memiliki validasi atau sanitasi untuk bidang *username*, sehingga pengguna dapat memasukkan karakter apa saja yang mungkin menyebabkan masalah. Misalnya, jika pengguna memasukkan username yang sudah ada, formulir akan menampilkan pesan kesalahan yang kurang informatif;
+2. Formulir ini tidak memiliki fitur untuk mengirim email konfirmasi atau aktivasi kepada pengguna yang baru mendaftar. Hal ini dapat mengurangi kepercayaan atau keamanan pengguna terhadap aplikasi kita;
+3. Formulir ini tidak memiliki fitur untuk mengatur kebijakan kata sandi, seperti panjang minimal, karakter khusus, atau masa berlaku. Hal ini dapat meningkatkan risiko kebocoran atau peretasan kata sandi pengguna.
+
+## Autentikasi vs. Otorisasi dalam konteks Django
+
+### Autentikasi
+
+Otentikasi adalah proses memverifikasi identitas pengguna dengan mendapatkan semacam kredensial dan menggunakan kredensial tersebut untuk memverifikasi identitas pengguna1. Django menyediakan sistem otentikasi bawaan yang dapat digunakan untuk mengelola pengguna, grup, izin, dan sesi. Sistem otentikasi Django memiliki beberapa komponen utama, seperti model User, backend otentikasi, formulir otentikasi, tampilan otentikasi, dan dekorator otentikasi. Sistem otentikasi Django dapat disesuaikan dengan kebutuhan aplikasi, misalnya dengan menggunakan backend otentikasi kustom, model User kustom, atau formulir otentikasi kustom.
+
+### Otorisasi
+
+Otorisasi adalah proses menentukan tingkat akses apa yang harus dimiliki pengguna tertentu (terotentikasi) ke sumber daya yang dikendalikan oleh sistem. Django menyediakan sistem otorisasi bawaan yang dapat digunakan untuk memberikan izin spesifik kepada pengguna atau grup untuk melakukan tindakan tertentu pada objek tertentu. Sistem otorisasi Django memiliki beberapa komponen utama, seperti *model Permission*, *model Group*, *backend* otorisasi, dekorator otorisasi, dan utilitas otorisasi. Sistem otorisasi Django juga dapat disesuaikan dengan kebutuhan aplikasi, misalnya dengan menggunakan *backend* otorisasi kustom, *model Permission* kustom, atau sistem otorisasi berbasis objek.
+
+Kedua sistem ini penting karena mereka membantu menjaga keamanan dan integritas data aplikasi. Dengan menggunakan sistem otentikasi dan otorisasi Django, kita dapat memastikan bahwa hanya pengguna yang sah yang dapat mengakses aplikasi kita, dan hanya memberikan akses yang sesuai dengan peran dan tanggung jawab mereka. Hal ini dapat mencegah penyalahgunaan data, manipulasi data, atau serangan dari pihak yang tidak berwenang.
+
+## *Cookies* dalam Konteks Aplikasi Web, dan Penggunaan *Cookies* dalam Django untuk Mengelola Data Sesi Pengguna
+
+*Cookies* adalah file yang dibuat oleh situs web yang dikunjungi oleh pengguna. Cookies berisi informasi tentang aktivitas dan preferensi pengguna di situs web tersebut. Cookies dapat membantu situs web untuk menyediakan konten yang lebih personal, mengingat informasi *login*, menampilkan iklan yang relevan, dan lain-lain.
+
+Django adalah sebuah *framework web* yang menggunakan *cookies* untuk mengelola data sesi pengguna. Data sesi adalah data yang disimpan di sisi server dan dikaitkan dengan pengunjung situs web tertentu. Data sesi dapat berisi informasi apa saja yang berguna untuk aplikasi, seperti status *login*, keranjang belanja, atau data formulir.
+
+Django menggunakan cookies untuk mengirim dan menerima ID sesi, yaitu sebuah string acak yang unik untuk setiap sesi. ID sesi disimpan dalam *cookie* yang dikirim ke browser pengguna saat sesi pertama kali dibuat. *Cookie* ini kemudian dikirim kembali ke server pada setiap permintaan selanjutnya. Django menggunakan ID sesi untuk mencari data sesi yang sesuai di basis data, *file* sistem, atau *cache*, tergantung pada *backend* sesi yang dipilih.
+
+Django juga memberikan beberapa opsi untuk mengonfigurasi *cookies* sesi, seperti masa berlaku, domain, jalur, aman, *httponly*, dan lain-lain. Django juga mendukung backend sesi berbasis *cookie*, yang menyimpan data sesi secara langsung dalam *cookie*, bukan hanya ID sesi. *Backend* ini lebih cepat dan sederhana, tetapi memiliki beberapa keterbatasan, seperti ukuran *cookie* yang terbatas dan risiko keamanan.
+
+## Apakah penggunaan cookies aman secara default dalam pengembangan web, apakah ada risiko potensial yang harus diwaspadai?
+
+Penggunaan cookies dalam pengembangan web tidak sepenuhnya aman secara *default*, karena ada beberapa risiko potensial yang harus diwaspadai, seperti:
+
+1. **Risiko privasi.** *Cookies* dapat mengumpulkan informasi tentang aktivitas dan preferensi pengguna di situs web, yang dapat digunakan untuk menargetkan iklan, menyesuaikan konten, atau menganalisis perilaku. Informasi ini dapat bersifat sensitif atau pribadi, dan dapat disalahgunakan oleh pihak yang tidak berwenang;
+2. **Risiko keamanan.** *Cookies* dapat disusupi oleh pihak yang tidak bertanggung jawab, yang dapat menyebabkan kerusakan pada perangkat pengguna atau mengakibatkan kebocoran informasi yang sensitif. Misalnya, *cookie* dapat dicuri, dipalsukan, atau dimanipulasi oleh penyerang untuk mendapatkan akses ke akun pengguna atau data penting;
+3. **Risiko performa.** Jika terlalu banyak *cookie* disimpan di perangkat pengguna, ini dapat menyebabkan penurunan performa komputer atau perangkat mobile pengguna. *Cookie* juga dapat memakan ruang penyimpanan dan *bandwidth*, yang dapat memperlambat proses *loading* situs web.
+
+
+Untuk mengurangi risiko-risiko tersebut, ada beberapa langkah yang dapat dilakukan oleh pengembang web dan pengguna, seperti:
+
+1. Menggunakan *cookie* sesi daripada *cookie* persisten atau *cookie* pihak ketiga, karena *cookie* sesi lebih aman dan hanya berlaku selama sesi *browser* berlangsung;
+2. Menggunakan enkripsi dan validasi untuk melindungi data *cookie* dari pencurian atau modifikasi;
+3. Menggunakan fitur kebijakan *cookie* atau undang-undang *cookie* untuk memberi tahu pengguna tentang penggunaan *cookie* di situs web dan meminta persetujuan mereka sebelum menyimpan *cookie* di perangkat mereka;
+4. Menghapus *cookie* yang tidak diperlukan atau sudah kadaluarsa dari perangkat pengguna secara berkala.
+5. Menggunakan *browser* yang memiliki fitur keamanan dan privasi yang baik, seperti memblokir *cookie* pihak ketiga, menghapus riwayat *browsing*, atau menggunakan mode penyamaran.
+
+**END OF TUGAS 4**
+
 # Tugas 3
 ## POST vs. GET
 Metode POST dan GET adalah metode _request_ yang paling umum digunakan dalam protokol HTTP untuk berkomunikasi dengan server. Keduanya digunakan untuk mengirimkan data dari klien ke server, namun cara dan tujuannya berbeda.
