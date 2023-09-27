@@ -103,3 +103,22 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('main:login'))
     response.delete_cookie('last_login')
     return response
+
+
+def add_amount(request, id):
+    product = Product.objects.get(pk=id)
+    # menambahkan amount sebanyak satu
+    product.amount += 1
+    product.save()
+    return HttpResponse("Amount berhasil ditambahkan")
+
+
+def reduce_amount(request, id):
+    product = Product.objects.get(pk=id)
+    # mengurangi amount sebanyak satu jika masih ada stok
+    if product.amount > 0:
+        product.amount -= 1
+        product.save()
+        return HttpResponse("Jumlah berhasil dikurangi")
+    else:
+        return HttpResponse("Jumlah tidak bisa dikurangi")
