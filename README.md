@@ -63,6 +63,17 @@ Untuk mengurangi risiko-risiko tersebut, ada beberapa langkah yang dapat dilakuk
 4. Menghapus *cookie* yang tidak diperlukan atau sudah kadaluarsa dari perangkat pengguna secara berkala.
 5. Menggunakan *browser* yang memiliki fitur keamanan dan privasi yang baik, seperti memblokir *cookie* pihak ketiga, menghapus riwayat *browsing*, atau menggunakan mode penyamaran.
 
+## Tambahan: Penerapan Step-By-Step Pengerjaan Tugas
+
+**Mengimplementasikan Fungsi Registrasi, Login, dan Logout**
+1. Membuat sebuah *form* registrasi yang berisi input untuk *username*, *email*, *password*, dan konfirmasi *password*;
+2. Membuat sebuah *route* untuk menangani permintaan POST dari *form* registrasi;
+3. Membuat sebuah *form login* yang berisi *input* untuk *username* atau *email* dan *password*. Kamu juga perlu menambahkan validasi untuk *input* tersebut, sama seperti *form* registrasi;
+4. Membuat sebuah *route* untuk menangani permintaan POST dari *form login*. Selain itu, *set session cookie* untuk pengguna yang berhasil *login* menggunakan *library* yang sama dengan *form* registrasi;
+5. Membuat sebuah *route* untuk menangani permintaan GET dari tombol *logout*. Di dalam *route* ini, kamu perlu melakukan beberapa hal, seperti:
+  - Menghapus *session cookie* untuk pengguna yang sedang login menggunakan library yang sama dengan form registrasi dan login;
+  - Mengarahkan pengguna ke halaman utama atau halaman login.
+
 **END OF TUGAS 4**
 
 # Tugas 3
