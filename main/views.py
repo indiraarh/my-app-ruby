@@ -110,7 +110,7 @@ def add_amount(request, id):
     # menambahkan amount sebanyak satu
     product.amount += 1
     product.save()
-    return HttpResponse("Amount berhasil ditambahkan")
+    return None
 
 
 def reduce_amount(request, id):
@@ -119,6 +119,11 @@ def reduce_amount(request, id):
     if product.amount > 0:
         product.amount -= 1
         product.save()
-        return HttpResponse("Jumlah berhasil dikurangi")
+        return None
     else:
-        return HttpResponse("Jumlah tidak bisa dikurangi")
+        return None
+
+def delete_product(request, id):
+    product = Product.objects.get(pk=id)
+    product.delete()
+    return None

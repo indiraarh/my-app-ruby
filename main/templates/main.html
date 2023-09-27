@@ -39,6 +39,8 @@
       <th>Category</th>
       <th>Date Added</th>
       <th>Delete</th>
+      <th>Add</th>
+      <th>Reduce</th>
     </tr>
   </thead>
 
@@ -58,6 +60,20 @@
         <form action="{% url 'main:delete_product' product.id %}" method="POST">
           {% csrf_token %}
           <button type="submit">Hapus</button>
+        </form>
+      </td>
+      <td>
+        <!-- tombol untuk add jumlah produk -->
+        <form action="{% url 'main:add_amount' product.id %}" method="POST">
+          {% csrf_token %}
+          <button type="submit">Tambah</button>
+        </form>
+      </td>
+      <td>
+        <!-- tombol untuk reduce jumlah produk -->
+        <form action="{% url 'main:reduce_amount' product.id %}" method="POST">
+          {% csrf_token %}
+          <button type="submit">Kurang</button>
         </form>
       </td>
     </tr>
