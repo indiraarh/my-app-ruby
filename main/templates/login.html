@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block meta %}
-<title>Login</title>
+  <title>Login</title>
 {% endblock meta %}
 
 {% block content %}
@@ -31,11 +31,11 @@
   </form>
 
   {% if messages %}
-  <ul>
-    {% for message in messages %}
-    <li>{{ message }}</li>
-    {% endfor %}
-  </ul>
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
   {% endif %}
 
   Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a>

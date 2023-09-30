@@ -123,6 +123,7 @@ def reduce_amount(request, id):
     else:
         return None
 
+
 def delete_product(request, id):
     product = Product.objects.get(pk=id)
     product.delete()
