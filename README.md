@@ -23,7 +23,7 @@ Di sini, semua elemen `<p>` akan berwarna merah.
 
 **Waktu yang tepat:**
 
-Menggunakan _element selector_ saat kita ingin memberikan gaya ke semua elemen dari jenis tertentu di seluruh halaman atau situs web Anda.
+Menggunakan _element selector_ saat kita ingin memberikan gaya ke semua elemen dari jenis tertentu di seluruh halaman atau situs web.
 
 ## HTML5 Tag yang Saya Ketahui
 - `<header>`: Representasi container untuk konten pengantar atau set navigasi.
@@ -38,27 +38,22 @@ Menggunakan _element selector_ saat kita ingin memberikan gaya ke semua elemen d
 ## Perbedaan Antara Margin dan Padding
 
 - _Margin_ adalah ruang di luar elemen, di luar batas atau border. Margin tidak memberi warna latar belakang dan digunakan untuk mengatur jarak antara elemen dengan elemen lainnya.
-- _Padding_ adalah ruang di dalam elemen, antara konten elemen dan batas atau border elemennya. Padding akan mempengaruhi dimensi elemen kecuali jika box-sizing diatur menjadi `border-box`.
+- _Padding_ adalah ruang di dalam elemen, antara konten elemen dan batas atau border elemennya. Padding akan mempengaruhi dimensi elemen kecuali jika _box-sizing_ diatur menjadi `border-box`.
 
 ## Perbedaan antara Framework CSS Tailwind dan Bootstrap, serta Kapan Waktu yang Ttepat dalam Menggunakannya
 
-- **Tailwind CSS**: Merupakan sebuah framework CSS utility-first yang memungkinkan Anda membangun desain custom dengan cepat. Anda sering membangun desain dengan menambahkan class utility secara langsung ke elemen HTML.
-- **Bootstrap**: Merupakan sebuah framework CSS yang menyediakan komponen desain dan gaya yang telah didefinisikan. Sangat cocok untuk prototipe cepat atau saat Anda ingin sebuah UI yang konsisten dengan upaya minimal.
+- **Tailwind CSS**: Merupakan sebuah framework CSS _utility-first_ yang memungkinkan kita membangun desain custom dengan cepat. Kita sering membangun desain dengan menambahkan class utility secara langsung ke elemen HTML.
+- **Bootstrap**: Merupakan sebuah framework CSS yang menyediakan komponen desain dan gaya yang telah didefinisikan. Sangat cocok untuk prototipe cepat atau saat ingin sebuah UI yang konsisten dengan upaya minimal.
 
 **Kapan menggunakan Bootstrap:**
 
-1. Ketika Anda membutuhkan prototipe yang cepat.
-2. Jika Anda tidak memerlukan desain yang sangat custom.
-3. Jika Anda ingin memanfaatkan komponen-komponen yang sudah siap pakai.
-4. Kapan menggunakan Tailwind CSS:
-
-Ketika Kita ingin kontrol penuh atas desain Kita.
-Jika lebih menyukai pendekatan _utility-first_ dalam _styling_.
-Jika ingin membangun komponen UI yang _custom_.
+1. Ketika membutuhkan prototipe yang cepat.
+2. Jika tidak memerlukan desain yang sangat custom.
+3. Jika ingin memanfaatkan komponen-komponen yang sudah siap pakai.
 
 **Kapan menggunakan Tailwind CSS:**
 
-1. Ketika kita ingin kontrol penuh atas desain.
+1. Ketika Kita ingin kontrol penuh atas desain kita.
 2. Jika lebih menyukai pendekatan _utility-first_ dalam _styling_.
 3. Jika ingin membangun komponen UI yang _custom_.
 
