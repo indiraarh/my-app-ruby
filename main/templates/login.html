@@ -2,6 +2,67 @@
 
 {% block meta %}
   <title>Login</title>
+  <style>
+    .login {
+      width: 60%;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #5a5a5a;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    .btn.login_btn {
+      background-color: #446699;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn.login_btn:hover {
+      background-color: #30445c;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      background-color: #ffdddd;
+      padding: 5px;
+      margin-bottom: 5px;
+      color: red;
+      border-radius: 5px;
+    }
+
+    a {
+      color: #446699;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 {% endblock meta %}
 
 {% block content %}

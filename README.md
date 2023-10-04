@@ -4,6 +4,73 @@ NPM     : 2206811846
 
 Kelas   : PBP B
 
+# Tugas 5
+
+## Manfaat dari Setiap Element Selector dan Kapan Waktu yang Tepat untuk Menggunakannya
+
+Element selector, sering disebut juga type selector, adalah cara untuk memilih elemen HTML berdasarkan jenis elemennya. Misalnya:
+
+`p {
+    color: red;
+}`
+
+Di sini, semua elemen `<p>` akan berwarna merah.
+
+**Manfaat:**
+
+- Efisiensi: Menggunakan selector ini memungkinkan kita untuk memberikan gaya ke semua elemen dari jenis tertentu tanpa harus menambahkan _class_ atau id spesifik.
+- Konsistensi: Membantu menjaga konsistensi tampilan seluruh elemen sejenis di seluruh situs web.
+
+**Waktu yang tepat:**
+
+Menggunakan _element selector_ saat kita ingin memberikan gaya ke semua elemen dari jenis tertentu di seluruh halaman atau situs web Anda.
+
+## HTML5 Tag yang Saya Ketahui
+- `<header>`: Representasi container untuk konten pengantar atau set navigasi.
+- `<footer>`: Representasi container untuk footer dari sebuah section atau page.
+- `<nav>`: Digunakan untuk mendefinisikan bagian navigasi.
+- `<article>`: Mewakili konten independen dan mandiri yang dapat dibaca secara terpisah.
+- `<section>`: Mewakili bagian dalam dokumen, seperti bab, tab, atau tab.
+- `<figure>` dan `<figcaption>`: Mewakili konten seperti ilustrasi, diagram, foto, dan kode.
+- `<aside>`: Mewakili konten yang sedikit terkait dengan konten sekitarnya dan dapat dipisahkan tanpa kehilangan arti.
+- `<details>` dan `<summary>`: Mewakili rincian yang pengguna dapat melihat atau menyembunyikan.
+
+## Perbedaan Antara Margin dan Padding
+
+- _Margin_ adalah ruang di luar elemen, di luar batas atau border. Margin tidak memberi warna latar belakang dan digunakan untuk mengatur jarak antara elemen dengan elemen lainnya.
+- _Padding_ adalah ruang di dalam elemen, antara konten elemen dan batas atau border elemennya. Padding akan mempengaruhi dimensi elemen kecuali jika box-sizing diatur menjadi `border-box`.
+
+## Perbedaan antara Framework CSS Tailwind dan Bootstrap, serta Kapan Waktu yang Ttepat dalam Menggunakannya
+
+- **Tailwind CSS**: Merupakan sebuah framework CSS utility-first yang memungkinkan Anda membangun desain custom dengan cepat. Anda sering membangun desain dengan menambahkan class utility secara langsung ke elemen HTML.
+- **Bootstrap**: Merupakan sebuah framework CSS yang menyediakan komponen desain dan gaya yang telah didefinisikan. Sangat cocok untuk prototipe cepat atau saat Anda ingin sebuah UI yang konsisten dengan upaya minimal.
+
+**Kapan menggunakan Bootstrap:**
+
+1. Ketika Anda membutuhkan prototipe yang cepat.
+2. Jika Anda tidak memerlukan desain yang sangat custom.
+3. Jika Anda ingin memanfaatkan komponen-komponen yang sudah siap pakai.
+4. Kapan menggunakan Tailwind CSS:
+
+Ketika Kita ingin kontrol penuh atas desain Kita.
+Jika lebih menyukai pendekatan _utility-first_ dalam _styling_.
+Jika ingin membangun komponen UI yang _custom_.
+
+**Kapan menggunakan Tailwind CSS:**
+
+1. Ketika kita ingin kontrol penuh atas desain.
+2. Jika lebih menyukai pendekatan _utility-first_ dalam _styling_.
+3. Jika ingin membangun komponen UI yang _custom_.
+
+### Cara saya mengimplementasi _To-do list_
+
+1. Memahami struktur HTML agar ketika dilengkapi dengan CSS tidak salah.
+2. Mengubah laman login, register, dan create_product dengan CSS sederhana.
+3. Saya menggunakan Card dalam inventori produk di laman main. Card tersebut saya ambil dari bootstrap dan dikenai perubahan sedikit agar lebih menyesuaikan.
+4. Pada tahap ini juga saya telah berhasil mengimplementasikan file static CSS untuk HTML, yang pada tugas-tugas sebelumnya saya menggunakan CSS masih pada laman HTML langsung.
+
+**End of Tugas 5**
+
 # Tugas 4
 
 ## Django UserCreationForm
