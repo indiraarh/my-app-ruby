@@ -12,7 +12,30 @@ _Asynchronous_ dan _synchronous programming_ adalah dua gaya pemrograman yang be
 
 Berikut adalah beberapa perbedaan antara _asynchronous_ dan _synchronous programming_:
 
-
+<table class="table table-bordered table-hover table-condensed">
+  <thead>
+    <tr>
+      <th title="Field #1">Aspek</th>
+      <th title="Field #2">Asynchronous</th>
+      <th title="Field #3">Synchronous</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Waktu Eksekusi**</td>
+      <td>Dapat meningkatkan kinerja program dengan mengurangi waktu tunggu yang disebabkan oleh operasi I/O yang lambat atau berat. Program asynchronous dapat menjalankan beberapa tugas secara bersamaan tanpa harus menunggu tugas lain selesai.</td>
+      <td>Harus menjalankan tugas secara berurutan dan menunggu setiap tugas selesai sebelum memulai tugas berikutnya.</td>
+    </tr>
+    <tr>
+      <td>**Kesulitan**</td>
+      <td>Biasanya lebih sulit untuk dipahami dan diimplementasikan karena memerlukan penggunaan teknik khusus seperti callback, promise, async/await, atau generator untuk mengelola alur eksekusi program.</td>
+      <td>Lebih mudah untuk diikuti karena alur eksekusi program sesuai dengan urutan kode.</td>
+    </tr>
+    <tr>
+      <td>**Kesalahan**</td>
+      <td>Lebih rentan terhadap kesalahan sehingga harus berhati-hati dalam menangani kondisi balapan (race condition), deadlock, atau callback hell yang dapat menyebabkan program tidak berfungsi dengan baik atau bahkan macet</td>
+      <td>Lebih mudah untuk ditelusuri dan didebug karena kesalahan biasanya terjadi pada titik tertentu dalam kode.</td>
+    </tr>
 
 ## Paradigma dan Contoh _Event-Driven Programming_ Pada Penerapan JS dan AJAX
 
