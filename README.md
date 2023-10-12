@@ -7,7 +7,6 @@ Kelas   : PBP B
 # Tugas 6
 
 ## Perbedaan _Asynchronus_ & _Synchronous Programming_
-
 _Asynchronous_ dan _synchronous programming_ adalah dua gaya pemrograman yang berbeda dalam hal bagaimana mereka menangani _input_ dan _output_ (I/O) dalam program. Secara umum, _asynchronous programming_ memungkinkan program untuk melanjutkan eksekusi tanpa harus menunggu hasil dari operasi I/O, sedangkan _synchronous programming_ mengharuskan program untuk menunggu hasil dari operasi I/O sebelum melanjutkan eksekusi.
 
 Berikut adalah beberapa perbedaan antara _asynchronous_ dan _synchronous programming_:
@@ -16,6 +15,10 @@ Berikut adalah beberapa perbedaan antara _asynchronous_ dan _synchronous program
 - **Kesalahan**: _Asynchronous programming_ lebih rentan terhadap kesalahan daripada _synchronous programming_. Program _asynchronous_ harus berhati-hati dalam menangani kondisi balapan (_race condition_), _deadlock_, atau _callback hell_ yang dapat menyebabkan program tidak berfungsi dengan baik atau bahkan macet. Program _synchronous_, sebaliknya, lebih mudah untuk ditelusuri dan di-_debug_ karena kesalahan biasanya terjadi pada titik tertentu dalam kode.
 
 ## Paradigma dan Contoh _Event-Driven Programming_ Pada Penerapan JS dan AJAX
+_Event-driven programming_ adalah paradigma pemrograman yang berfokus pada penanganan _event_ atau kejadian yang terjadi pada program. _Event_ dapat berasal dari interaksi pengguna, _input_/_output_, _timer_, atau sumber lainnya. Program yang menggunakan paradigma ini biasanya memiliki struktur yang fleksibel dan responsif.
+Contoh _event-driven programming_ pada penerapan JS dan AJAX adalah sebagai berikut:
+- **Javascript** (JS) adalah bahasa pemrograman yang mendukung _event-driven programming_. Kita dapat menggunakan objek DOM untuk mengakses elemen HTML dan menambahkan _event listener_ untuk menentukan fungsi yang akan dijalankan saat _event_ tertentu terjadi. Misalnya, kita dapat membuat fungsi untuk mengubah warna latar belakang elemen saat diklik.
+- **AJAX** adalah teknik untuk melakukan komunikasi asinkron dengan server web tanpa perlu memuat ulang halaman web. AJAX menggunakan objek `XMLHttpRequest` atau metode `fetch` untuk mengirim dan menerima data dari server. Kita dapat menentukan fungsi _callback_ untuk menangani respon dari server saat _event load_, _error_, atau progress terjadi.
 
 ## Penerapan _Asynchronous Programming_ pada AJAX
 
