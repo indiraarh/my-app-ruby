@@ -4,6 +4,49 @@ NPM     : 2206811846
 
 Kelas   : PBP B
 
+# Tugas 6
+
+## Perbedaan _Asynchronus_ & _Synchronous Programming_
+
+_Asynchronous_ dan _synchronous programming_ adalah dua gaya pemrograman yang berbeda dalam hal bagaimana mereka menangani _input_ dan _output_ (I/O) dalam program. Secara umum, _asynchronous programming_ memungkinkan program untuk melanjutkan eksekusi tanpa harus menunggu hasil dari operasi I/O, sedangkan _synchronous programming_ mengharuskan program untuk menunggu hasil dari operasi I/O sebelum melanjutkan eksekusi.
+
+Berikut adalah beberapa perbedaan antara _asynchronous_ dan _synchronous programming_:
+
+<table class="table table-bordered table-hover table-condensed">
+  <thead>
+    <tr>
+      <th title="Field #1">Aspek</th>
+      <th title="Field #2">Asynchronous</th>
+      <th title="Field #3">Synchronous</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Waktu Eksekusi**</td>
+      <td>Dapat meningkatkan kinerja program dengan mengurangi waktu tunggu yang disebabkan oleh operasi I/O yang lambat atau berat. Program asynchronous dapat menjalankan beberapa tugas secara bersamaan tanpa harus menunggu tugas lain selesai.</td>
+      <td>Harus menjalankan tugas secara berurutan dan menunggu setiap tugas selesai sebelum memulai tugas berikutnya.</td>
+    </tr>
+    <tr>
+      <td>**Kesulitan**</td>
+      <td>Biasanya lebih sulit untuk dipahami dan diimplementasikan karena memerlukan penggunaan teknik khusus seperti callback, promise, async/await, atau generator untuk mengelola alur eksekusi program.</td>
+      <td>Lebih mudah untuk diikuti karena alur eksekusi program sesuai dengan urutan kode.</td>
+    </tr>
+    <tr>
+      <td>**Kesalahan**</td>
+      <td>Lebih rentan terhadap kesalahan sehingga harus berhati-hati dalam menangani kondisi balapan (race condition), deadlock, atau callback hell yang dapat menyebabkan program tidak berfungsi dengan baik atau bahkan macet</td>
+      <td>Lebih mudah untuk ditelusuri dan didebug karena kesalahan biasanya terjadi pada titik tertentu dalam kode.</td>
+    </tr>
+
+## Paradigma dan Contoh _Event-Driven Programming_ Pada Penerapan JS dan AJAX
+
+## Penerapan _Asynchronous Programming_ pada AJAX
+
+## AJAX dengan Fetch API vs. jQuery
+
+### Cara Saya Mengimplementasikan _Checklist_ Tugas
+
+**End of Tugas 6**
+
 # Tugas 5
 
 ## Manfaat dari Setiap Element Selector dan Kapan Waktu yang Tepat untuk Menggunakannya
@@ -57,7 +100,7 @@ Menggunakan _element selector_ saat kita ingin memberikan gaya ke semua elemen d
 2. Jika lebih menyukai pendekatan _utility-first_ dalam _styling_.
 3. Jika ingin membangun komponen UI yang _custom_.
 
-### Cara saya mengimplementasi _To-do list_
+### Cara Saya Mengimplementasi _Checklist_ Tugas
 
 1. Memahami struktur HTML agar ketika dilengkapi dengan CSS tidak salah.
 2. Mengubah laman login, register, dan create_product dengan CSS sederhana.
