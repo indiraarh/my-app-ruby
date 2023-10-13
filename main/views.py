@@ -16,6 +16,7 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
+
 @login_required(login_url='/login')
 def show_main(request):
     products = Product.objects.filter(user=request.user)
@@ -23,7 +24,8 @@ def show_main(request):
         'name': request.user.username,
         'class': 'PBP B',
         'products': products,
-        'last_login': request.COOKIES.get('last_login', 'unknown'), #berbeda dengan tutorial, karena untuk mengatasi error
+        # berbeda dengan tutorial, karena untuk mengatasi error
+        'last_login': request.COOKIES.get('last_login', 'unknown'),
     }
     return render(request, "main.html", context)
 
@@ -127,7 +129,7 @@ def delete_product(request, id):
 
 def edit_product(request, id):
     # Get product berdasarkan ID
-    product = Product.objects.get(pk = id)
+    product = Product.objects.get(pk=id)
     # Set product sebagai instance dari form
     form = ProductForm(request.POST or None, instance=product)
     if form.is_valid() and request.method == "POST":
@@ -140,7 +142,7 @@ def edit_product(request, id):
 
 def delete_product(request, id):
     # Get data berdasarkan ID
-    product = Product.objects.get(pk = id)
+    product = Product.objects.get(pk=id)
     # Hapus data
     product.delete()
     # Kembali ke halaman awal
@@ -160,12 +162,9 @@ def add_product_ajax(request):
         description = request.POST.get("description")
         user = request.user
 
-        new_product = Product(name=name, price=price, description=description, user=user)
+        new_product = Product(name=name, price=price,
+                              description=description, user=user)
         new_product.save()
-
         return HttpResponse(b"CREATED", status=201)
+
     return HttpResponseNotFound()
-
-
-    
-    

@@ -17,23 +17,35 @@ Berikut adalah beberapa perbedaan antara _asynchronous_ dan _synchronous program
 ## Paradigma dan Contoh _Event-Driven Programming_ Pada Penerapan JS dan AJAX
 _Event-driven programming_ adalah paradigma pemrograman yang berfokus pada penanganan _event_ atau kejadian yang terjadi pada program. _Event_ dapat berasal dari interaksi pengguna, _input_/_output_, _timer_, atau sumber lainnya. Program yang menggunakan paradigma ini biasanya memiliki struktur yang fleksibel dan responsif.
 
-Pada JS Kita dapat menggunakan objek DOM untuk mengakses elemen HTML dan menambahkan _event listener_ untuk menentukan fungsi yang akan dijalankan saat _event_ tertentu terjadi. Contoh pada tugas ini, misalnya dalam ...
+Pada JS Kita dapat menggunakan objek DOM untuk mengakses elemen HTML dan menambahkan _event listener_ untuk menentukan fungsi yang akan dijalankan saat _event_ tertentu terjadi. Contoh pada tugas ini, misalnya dalam `document.getElementById("button_add").onclick = addProduct`
 
 ## Penerapan _Asynchronous Programming_ pada AJAX
  **AJAX** adalah teknik untuk melakukan komunikasi asinkron dengan server web tanpa perlu memuat ulang halaman web. AJAX menggunakan objek `XMLHttpRequest` atau metode `fetch` untuk mengirim dan menerima data dari server. Kita dapat menentukan fungsi _callback_ untuk menangani respon dari server saat _event load_, _error_, atau progress terjadi.
- Contoh: ...
+
+ Contoh:
+ - Fungsi `getProducts` yang digunakan untuk mengambil data produk dari server dengan menggunakan AJAX. Fungsi ini mengirimkan permintaan GET ke URL yang dihasilkan oleh template Django.
+ - Fungsi `refreshProducts` untuk memperbarui tampilan produk di halaman web dengan data produk yang diambil melalui AJAX.
+- Fungsi `addProduct` untuk menambahkan produk baru ke server menggunakan AJAX setelah pengguna mengisi formulir modal "Add New Product" dan mengklik tombol "Add Product".
 
 ## AJAX dengan Fetch API vs. jQuery
-- Sintaks: AJAX dengan Fetch API menggunakan metode _fetch_ yang mengembalikan sebuah _Promise_, yang merupakan objek yang merepresentasikan hasil akhir dari operasi asinkron `Promise` dapat diikuti oleh metode `then` untuk menangani respon sukses, atau metode `catch` untuk menangani respon gagal.
+- Sintaks: AJAX dengan Fetch API menggunakan metode `fetch` yang mengembalikan sebuah `Promise`, yang merupakan objek yang merepresentasikan hasil akhir dari operasi asinkron `Promise` dapat diikuti oleh metode `then` untuk menangani respon sukses, atau metode `catch` untuk menangani respon gagal.
 - AJAX dengan jQuery menggunakan metode `$.ajax` yang menerima sebuah objek sebagai parameter, yang berisi berbagai opsi untuk mengatur permintaan, seperti `url`, `method`, `data`, `success`, `error`, dll.
 - Kesesuaian: AJAX dengan Fetch API adalah fitur baru yang ditambahkan pada JavaScript versi ES6, sehingga tidak didukung oleh semua browser. Kita dapat menggunakan _polyfill_ untuk membuat Fetch API berfungsi pada browser lama. AJAX dengan jQuery adalah fitur lama yang didukung oleh hampir semua browser, tetapi perlu library jQuery pada halaman web.
-
 - Fitur: AJAX dengan Fetch API memiliki fitur lebih banyak dan fleksibel daripada AJAX dengan jQuery. Beberapa fitur tersebut adalah:
-  1. Fetch API dapat melakukan permintaan cross-origin (CORS) tanpa harus mengatur header khusus.
-  2. Fetch API dapat melakukan streaming data, yaitu memproses data secara bertahap tanpa harus menunggu seluruh data tersedia.
-  3. Fetch API dapat melakukan permintaan `abort`, yaitu membatalkan permintaan yang sedang berlangsung jika diperlukan.
+  - Fetch API dapat melakukan permintaan _cross-origin_ (CORS) tanpa harus mengatur _header_ khusus.
+  - Fetch API dapat melakukan _streaming data_, yaitu memproses data secara bertahap tanpa harus menunggu seluruh data tersedia.
+  - Fetch API dapat melakukan permintaan `abort`, yaitu membatalkan permintaan yang sedang berlangsung jika diperlukan.
+
+Dari penjelasan di atas, AJAX dengan Fetch API memiliki keunggulan lebih daripada dengan jQuery.
 
 ### Cara Saya Mengimplementasikan _Checklist_ Tugas
+AJAX GET
+1. Mengubah implementasi kode untuk cards (data item) agar dapat didukung AJAX GET. Selanjutnya di-render dengan JavaScript.
+2. Mengggunakan `fetch` untuk mendapatkan data dari server. Pada tugas ini, `fetch` digunakan untuk mengambil data dari views.py yang merupakan kumpulan _function_ dan digunakan dalam main.html.
+
+AJAX POST
+1. Membuat tombol untuk membuka modal dengan _form_ yang berfungsi untuk user bisa menambahkan menambah item dan disimpan di _inventory_.
+2. Membuat fungsi baru pada views.py, yaitu `get_product_json`, `add_product_ajax`. Keduanya berfungsi mengambil dan memproses data dari form untuk membuat produk baru. Jika berhasil menambahkan produk maka statusnya 201 (_created status code_).
 
 **End of Tugas 6**
 
