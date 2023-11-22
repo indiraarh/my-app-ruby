@@ -2,6 +2,7 @@
 {% block content %}
 {% load static %}
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">R U B Y</a>
@@ -137,33 +138,36 @@
   async function refreshProducts() {
     document.getElementById("product_cards").innerHTML = ""
     const products = await getProducts()
-    products.forEach((products) => {
+    console.log(products);
+    let htmlString = ''
+    products.forEach((product) => {
       const card = `
         <div class="col-md-4 mb-4 card-items">
           <div class="card" style="width: 18rem;">
             <img class="card-img-top"
               src="https://www.ikea.com/us/en/images/products/enhet-bathroom-white-white-frame__1058106_pe849140_s4.jpg"
-              alt="${products.fields.name}">
+              alt="${product.fields.name}">
               <div class="card-body">
-                <h5 class="card-title">${products.fields.name}</h5>
+                <h5 class="card-title">${product.fields.name}</h5>
                 <p class="card-text">
-                  Price: ${products.fields.price}<br>
-                    Description: ${products.fields.description}<br>
-                      Amount: ${products.fields.amount}<br>
-                        Category: ${products.fields.category}<br>
-                          Date Added: ${products.fields.date_added}
+                  Price: ${product.fields.price}<br>
+                    Description: ${product.fields.description}<br>
+                      Amount: ${product.fields.amount}<br>
+                        Category: ${product.fields.category}<br>
+                          Date Added: ${product.fields.date_added}
                         </p>
                         <div class="btn-container">
-                          <a href="/edit-product/${products.pk}" class="btn btn-primary">Edit</a>
-                          <a href="/delete_product/${products.pk}" class="btn btn-danger">Hapus</a>
-                          <a href="/add_amount/${products.pk}" class="btn btn-success">Tambah</a>
-                          <a href="/reduce_amount/${products.pk}" class="btn btn-warning">Kurang</a>
+                          <a href="/edit-product/${product.pk}" class="btn btn-primary">Edit</a>
+                          <a href="/delete_product/${product.pk}" class="btn btn-danger">Hapus</a>
+                          <a href="/add_amount/${product.pk}" class="btn btn-success">Tambah</a>
+                          <a href="/reduce_amount/${product.pk}" class="btn btn-warning">Kurang</a>
                         </div>
                       </div>
                     </div>
                   </div>`
+      htmlString += card
     })
-    document.getElementById("product_cards").innerHTML += card
+    document.getElementById("product_cards").innerHTML += htmlString
   }
   refreshProducts()
 
